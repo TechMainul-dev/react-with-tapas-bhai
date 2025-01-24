@@ -8,6 +8,7 @@
     "workbench.colorTheme": "Learn with Sumit Official Theme",
     "editor.tabSize": 2,
     "prettier.tabWidth": 2,
-    "editor.lineHeight": 22
+    "editor.lineHeight": 22,
+    "cSpell.words": ["tapa"]
   }
 }
