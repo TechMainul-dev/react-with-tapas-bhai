@@ -1,26 +1,19 @@
-function Search() {
+import PropTypes from 'prop-types';
+function Search({ searchTerm, onSearchTerm }) {
   return (
-    <div className="">
-      <input
-        type="search"
-        className="border border-slate-300 rounded-md  px-2 py-1"
-        placeholder="Search cars..."
-      />
-
-      <label
-        htmlFor="showPremium"
-        className="content-center cursor-pointer ms-2 "
-      >
-        <input
-          id="showPremium"
-          type="checkbox"
-          className="me-1 cursor-pointer"
-          placeholder="Search cars..."
-        />
-        <span>Show Premium Only</span>
-      </label>
-    </div>
+    <input
+      type="search"
+      placeholder="Search cars..."
+      value={searchTerm}
+      onChange={(e) => onSearchTerm(e.target.value)}
+      className="border border-slate-300 rounded-md  px-2 py-1"
+    />
   );
 }
+
+Search.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  onSearchTerm: PropTypes.func.isRequired,
+};
 
 export default Search;

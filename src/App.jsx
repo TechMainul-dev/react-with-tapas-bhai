@@ -1,9 +1,9 @@
 import './App.css';
 // import Banner from './Banner';
-import Cars from './Cars';
+import CarShows from './CarShows';
 
 function App() {
-  return <Cars />;
+  return <CarShows />;
 }
 
 export default App;
