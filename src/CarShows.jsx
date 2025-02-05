@@ -52,11 +52,7 @@ function CarShows() {
   const [cars, setCars] = useState(CARS);
 
   const toggleFeatured = (isChecked) => {
-    setCars(
-      cars.map((car) =>
-        car.isPremium === isChecked ? { ...car, featured: !car.featured } : car,
-      ),
-    );
+    setCars(isChecked ? cars.filter((car) => car.isPremium) : CARS);
   };
 
   return (
@@ -64,11 +60,7 @@ function CarShows() {
       <Header />
       <Search searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
       <Featured onFeaturedCar={toggleFeatured} />
-      <CarList
-        searchTerm={searchTerm}
-        cars={CARS}
-        onFeaturedCar={toggleFeatured}
-      />
+      <CarList searchTerm={searchTerm} cars={cars} />
     </div>
   );
 }

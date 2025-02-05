@@ -16,7 +16,7 @@ function Featured({ onFeaturedCar }) {
       className="content-center cursor-pointer ms-2 "
     >
       <input
-        onClick={() => onFeaturedCar(handleCheckboxChange)}
+        onClick={() => handleCheckboxChange()}
         id="showPremium"
         type="checkbox"
         className="me-1 cursor-pointer"
