@@ -2,15 +2,18 @@ import PropTypes from 'prop-types';
 import CarRow from './CarRow';
 
 function CarList({ searchTerm, cars }) {
-  // console.log(searchTerm);
+  const rows = [];
+  cars.forEach((car) => {
+    if (car.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1)
+      return;
+
+    rows.push(<CarRow key={car.id} car={car} />);
+  });
+
   return (
-    <ul className="grid gap-2 mt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-      {cars.map((car) => (
-        <li key={car.id} className="border border-slate-300 p-2 rounded-md">
-          <CarRow car={car} />
-        </li>
-      ))}
-    </ul>
+    <div className="grid gap-2 mt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+      {rows}
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function CarRow({ car }) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="border border-slate-300 p-2 rounded-md flex justify-between items-center">
       <CarDetails
         title={car.title}
         brand={car.brand}

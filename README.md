@@ -53,3 +53,65 @@ Follow these steps to set up and run the project locally:
     npm install or  yarn install
     npm run dev
 open link "http://localhost:5173/"
+
+
+
+# Task 4: 🚗 React Car App with search and filter
+
+This project is a React application that allows users to filter and display cars based on their premium status. The app demonstrates the use of state management, conditional rendering, and array manipulation in React.
+
+---
+
+## 📋 Requirements
+
+1. **Diagram (PNG)**: A visual representation of the component structure and state flow.
+2. **State Name and Component Location**: 
+    i. Search → BookList,
+    ii. Featured (isPremium) → CarShows
+3. **Project Link**: A link to the live project or repository.
+
+---
+
+## 📂 Project Structure
+
+### Diagram
+![Component Diagram](./src/assets/CarShows.png)  
+*(Replace `diagram.png` with the actual file name of your diagram.)*
+
+---
+
+### State and Component Details
+
+| **State Name**      | **Component Location**       | **Description**                                                                 |
+|----------------------|------------------------------|---------------------------------------------------------------------------------|
+| `search`              | `App.js`                     | Holds the list of cars. Updated based on the premium filter.                    |
+| `toggleFeatured`    | `App.js`                     | Function to filter cars based on the `isPremium` property.                      |
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-link>
+Navigate to the project directory:
+
+bash
+Copy
+cd <project-folder>
+Install dependencies:
+
+bash
+Copy
+npm install
+Start the development server:
+
+bash
+Copy
+npm start
+Open your browser and visit http://localhost:3000.
+
+🔗 Project Link
+GitHub Repository: https://github.com/TechMainul-dev/react-with-tapas-bhai.git
+
+Live Demo: https://react-app-with-tapascript.netlify.app/
