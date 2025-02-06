@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Plus } from 'lucide-react';
 
-function UserAdd({ users, onUserAdd }) {
+function UserAdd({ onUserAdd }) {
   return (
     <a
       onClick={() => onUserAdd()}
@@ -13,7 +13,6 @@ function UserAdd({ users, onUserAdd }) {
 }
 
 UserAdd.propType = {
-  users: PropTypes.array.isRequired,
   onUserAdd: PropTypes.func.isRequired,
 };
 
