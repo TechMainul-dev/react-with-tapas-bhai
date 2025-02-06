@@ -1,14 +1,8 @@
 import PropTypes from 'prop-types';
 import UserRow from './UserRow';
 
-function UserList({ users, newUser }) {
-  const rows = [];
-
-  users.forEach((user) => {
-    rows.push(<UserRow key={user.id} user={user} />);
-  });
-
-  if (newUser) rows.push(<UserRow key={rows.length + 1} user={newUser} />);
+function UserList({ users }) {
+  const rows = users.map((user) => <UserRow key={user.id} user={user} />);
 
   return (
     <div className="grid gap-2 mt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
@@ -19,7 +13,6 @@ function UserList({ users, newUser }) {
 
 UserList.protoTypes = {
   users: PropTypes.array.isRequired,
-  newUser: PropTypes.array.isRequired,
 };
 
 export default UserList;

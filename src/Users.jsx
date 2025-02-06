@@ -36,19 +36,19 @@ const USERS = [
 ];
 
 function Users() {
-  const [newUser, setNewUser] = useState('');
+  const [users, setUsers] = useState(USERS);
   const addUser = () => {
     const randomIndex = Math.floor(Math.random() * USERS.length);
-    const randomNumber = USERS[randomIndex];
-    // console.log(randomNumber);
+    const randomUser = USERS[randomIndex];
+    randomUser.id = users.length + 1;
 
-    setNewUser(randomNumber);
+    setUsers([...users, randomUser]);
   };
 
   return (
     <div className="p-5">
       <UserAdd onUserAdd={addUser} />
-      <UserList users={USERS} newUser={newUser} />
+      <UserList users={users} />
     </div>
   );
 }
