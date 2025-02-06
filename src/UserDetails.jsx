@@ -1,21 +1,14 @@
 import PropTypes from 'prop-types';
+import { Fragment } from 'react';
 
 function UserDetails({ fullName, age, occupation }) {
-  const liClassNames = 'inline-block capitalize font-semibold min-w-[85px]';
+  const liClassNames = 'inline-block capitalize font-semibold';
   return (
-    <div>
-      <ul>
-        <li>
-          <span className={liClassNames}>FullName </span>: {fullName}
-        </li>
-        <li>
-          <span className={liClassNames}>Age </span>: {age}
-        </li>
-        <li>
-          <span className={liClassNames}>Occupation </span>: {occupation}
-        </li>
-      </ul>
-    </div>
+    <Fragment>
+      <span className={liClassNames}>FullName </span>: {fullName}
+      <span className={liClassNames}>Age </span>: {age}
+      <span className={liClassNames}>Occupation </span>: {occupation}
+    </Fragment>
   );
 }
 

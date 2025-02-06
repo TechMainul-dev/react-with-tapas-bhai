@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import UserQty from './UserQty';
 import UserAdd from './UserAdd';
 import UserList from './UserList';
 
@@ -40,13 +41,13 @@ function Users() {
   const addUser = () => {
     const randomIndex = Math.floor(Math.random() * USERS.length);
     const randomUser = USERS[randomIndex];
-    randomUser.id = users.length + 1;
-
-    setUsers([...users, randomUser]);
+    const newUser = { ...randomUser, id: users.length + 1 }; //? Create a copy of the random user and assign a new ID
+    setUsers([...users, newUser]); //? Add the new user to the users state
   };
 
   return (
     <div className="p-5">
+      <UserQty totalUser={users.length} />
       <UserAdd onUserAdd={addUser} />
       <UserList users={users} />
     </div>

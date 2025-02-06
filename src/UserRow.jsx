@@ -3,7 +3,7 @@ import UserDetails from './UserDetails';
 
 function UserRow({ user }) {
   return (
-    <div className="border border-slate-300 p-2 rounded-md flex justify-between items-center">
+    <div className="border border-slate-300 p-2 rounded-md grid grid-cols-[90px_1fr]">
       <UserDetails
         fullName={user.fullName}
         age={user.age}

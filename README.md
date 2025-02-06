@@ -115,3 +115,27 @@ Open your browser and visit http://localhost:3000.
 GitHub Repository: https://github.com/TechMainul-dev/react-with-tapas-bhai.git
 
 Live Demo: https://react-app-with-tapascript.netlify.app/
+
+
+# Task 5: 👥
+🚀 Features
+Display a list of users with their full name, age, and occupation.
+
+Add a random user to the list by clicking the + icon.
+
+Show the total user count at the top of the page.
+
+Built with Vite for fast development and TailwindCSS for styling.
+
+Includes a Figma UI design, component breakdown diagram, and component hierarchy diagram.
+
+Deployed publicly for easy access.
+
+### Project Structure
+![Component Diagram](./src/assets/user-diagram.png)  
+
+
+### Component Hierarchy Diagram :
+
+![Component Diagram](./src/assets/user-hierarchy.png)  
+
