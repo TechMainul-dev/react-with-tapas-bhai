@@ -46,7 +46,7 @@ function Users() {
   };
 
   return (
-    <div className="p-5">
+    <div className="py-5">
       <UserQty totalUser={users.length} />
       <UserAdd onUserAdd={addUser} />
       <UserList users={users} />

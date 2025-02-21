@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import CarList from './CarList';
-import Header from './Header';
 import Search from './Search';
-import Featured from './Featured';
+import Featured from '../Featured';
 
 const CARS = [
   {
@@ -56,8 +55,7 @@ function CarShows() {
   };
 
   return (
-    <div className="p-5">
-      <Header />
+    <div className="py-5">
       <Search searchTerm={searchTerm} onSearchTerm={setSearchTerm} />
       <Featured onFeaturedCar={toggleFeatured} />
       <CarList searchTerm={searchTerm} cars={cars} />

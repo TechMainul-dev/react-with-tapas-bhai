@@ -1,15 +1,18 @@
 import './App.css';
-// import Banner from './Banner';
-import CarShows from './CarShows';
-import Users from './Users';
+import Header from './Header';
+import CarShows from './CarList/CarShows';
+import Users from './UserList/Users';
+import UserListImmutable from './immutable/UserList';
 
 function App() {
   return (
-    <>
+    <div className="p-5">
+      <Header />
+      <UserListImmutable />
       <CarShows />
       <hr />
       <Users />
-    </>
+    </div>
   );
 }
 
