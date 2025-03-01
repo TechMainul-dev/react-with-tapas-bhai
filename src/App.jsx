@@ -3,6 +3,7 @@ import Header from './Header';
 import CarShows from './CarList/CarShows';
 import Users from './UserList/Users';
 // import UserListImmutable from './immutable/UserList';
+import { Basic } from './UseEffect/Basic';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <CarShows />
       <hr />
       <Users />
+      <Basic />
     </div>
   );
 }
