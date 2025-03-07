@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 export const StateChangingEffect = () => {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    document.title = `Count: ${count}`;
-  }, [count]);
+  // useEffect(() => {
+  //   document.title = `Count: ${count}`;
+  // }, [count]);
 
   return (
     <div>
