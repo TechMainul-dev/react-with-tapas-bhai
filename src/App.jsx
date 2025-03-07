@@ -1,28 +1,35 @@
-import './App.css';
-import Header from './Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+// removed Blog import
 import CarShows from './CarList/CarShows';
 import Users from './UserList/Users';
-// import UserListImmutable from './immutable/UserList';
+import { Basic } from './UseEffect/Basic';
 import { BasicUsage } from './useFormStatus/BasicUsage';
 import { DataUsage } from './useFormStatus/DataUsage';
-import { Basic } from './UseEffect/Basic';
 
 function App() {
   return (
-    <div className="p-5">
-      <Header />
-      {/* <UserListImmutable /> */}
-      <CarShows />
-      <hr />
-      <Users />
-      <Basic />
-
-      <br />
-      <hr />
-      <br />
-      <BasicUsage />
-      <DataUsage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/car-list" element={<CarShows />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/use-effect" element={<Basic />} />
+          <Route
+            path="/form-status"
+            element={
+              <>
+                <BasicUsage />
+                <DataUsage />
+              </>
+            }
+          />
+          {/* removed blog route */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
